@@ -1,0 +1,163 @@
+{
+  "GPT-5.4": {
+    "model": "GPT-5.4",
+    "status": "success",
+    "latency": 54.74,
+    "tokens": 2352,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 3,
+      "kg_e": 14,
+      "kg_r": 15,
+      "gap": true
+    },
+    "insights_text": [
+      "There is a translational gap between AI counseling system design and clinical validation: arXiv show",
+      "Benchmark performance in AI counseling does not yet imply real-world therapeutic adequacy: arXiv rep",
+      "The infrastructure to build multi-source mental health research agents is now available, but methodo",
+      "Current evidence supports a stepped-care interpretation for AI mental health systems: PubMed provide",
+      "A next-generation research workflow is emerging in which protocol-level interoperability could accel"
+    ],
+    "research_gap": "There is no documented, standardized pattern for composing multiple MCP-backed evidence sources into a clinically safe mental health research or deployment pipeline that links AI counseling benchmarks"
+  },
+  "DeepSeek-R1": {
+    "model": "DeepSeek-R1",
+    "status": "success",
+    "latency": 33.85,
+    "tokens": 4296,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 2,
+      "kg_e": 6,
+      "kg_r": 4,
+      "gap": true
+    },
+    "insights_text": [
+      "AI mental health tools (arXiv) lack clinical validation (e.g., no RCTs), despite PubMed evidence sho",
+      "Multi-agent counseling systems (arXiv, e.g., MAGneT) could leverage MCP/A2A protocols (Firecrawl) fo",
+      "LangChain's multi-server capability (Context7) enables scalable deployment of clinically validated c",
+      "The growing MCP ecosystem (Firecrawl: 106 servers) lacks documented composition patterns (Context7),",
+      "PubMed-proven short-term efficacy of mental health chatbots contrasts with arXiv's focus on technica"
+    ],
+    "research_gap": "Integration of clinically validated AI mental health tools with scalable multi-agent protocols (MCP/A2A) is hindered by absent composition patterns and misaligned evaluation metrics between clinical a"
+  },
+  "Mistral-Large-3": {
+    "model": "Mistral-Large-3",
+    "status": "success",
+    "latency": 6.47,
+    "tokens": 1857,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 3,
+      "kg_e": 9,
+      "kg_r": 8,
+      "gap": true
+    },
+    "insights_text": [
+      "While arXiv papers (e.g., PsyLLM, SuDoSys) report no clinical trials for AI-driven mental health cha",
+      "ArXiv's CounselingBench (2410.22446) reveals frontier LLMs fail expert-level empathy, yet PubMed's R",
+      "Firecrawl's MCP Registry (106 servers) highlights protocol proliferation, while Context7's LangChain",
+      "ArXiv's RECAP (2601.14780) achieves 91.25% F1 in detecting client resistance, a critical clinical sk",
+      "Firecrawl's distinction between MCP (tool exposure) and A2A (agent collaboration) protocols contrast"
+    ],
+    "research_gap": "No standardized framework exists to compose MCP/A2A protocols with clinically validated AI counseling agents, limiting cross-domain translation of technical innovations (e.g., resistance detection, mu"
+  },
+  "Llama-4-Maverick": {
+    "model": "Llama-4-Maverick",
+    "status": "success",
+    "latency": 3.0,
+    "tokens": 1374,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 3,
+      "kg_e": 4,
+      "kg_r": 3,
+      "gap": true
+    },
+    "insights_text": [
+      "The development of AI chatbots for mental health is a common theme across arXiv and PubMed, with arX",
+      "The existence of multiple MCP servers (e.g., arXiv, PubMed, Firecrawl, Context7) and the ability to ",
+      "The emphasis on evaluating chatbot effectiveness in various domains (e.g., mental health in arXiv an",
+      "The lack of documented composition patterns for MCP servers (Context7) alongside the existence of mu",
+      "The focus on therapeutic effectiveness and expert-level performance in arXiv papers and the systemat"
+    ],
+    "research_gap": "Standardization and integration of MCP protocols across different domains and servers."
+  },
+  "Gemini-2.5-Flash": {
+    "model": "Gemini-2.5-Flash",
+    "status": "success",
+    "latency": 15.63,
+    "tokens": 4592,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 2,
+      "kg_e": 12,
+      "kg_r": 11,
+      "gap": true
+    },
+    "insights_text": [
+      "The rapid development of novel LLM-based mental health interventions (e.g., PsyLLM, SuDoSys in arXiv",
+      "Despite clinical evidence supporting the general efficacy of AI chatbots for mental health (PubMed),",
+      "The burgeoning ecosystem of 106 official MCP servers (Firecrawl) and the availability of tools for c",
+      "The emergence of multi-agent AI systems for complex tasks like synthetic counseling (MAGneT in arXiv",
+      "The proven short-term therapeutic effectiveness of AI chatbots in clinical settings (PubMed) undersc"
+    ],
+    "research_gap": "While tools exist to connect multiple MCP servers, there is a significant research and development gap in defining and documenting standardized composition patterns for orchestrating these diverse AI "
+  },
+  "Claude-Sonnet-4.5": {
+    "model": "Claude-Sonnet-4.5",
+    "status": "success",
+    "latency": 21.25,
+    "tokens": 2411,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 3,
+      "kg_e": 13,
+      "kg_r": 11,
+      "gap": true
+    },
+    "insights_text": [
+      "ArXiv papers demonstrate advanced AI counseling architectures (PsyLLM, MAGneT with 77.2% expert pref",
+      "CounselingBench evaluation shows frontier LLMs fail expert-level empathy standards, while PubMed met",
+      "The MCP protocol enables 106 official servers with multi-server connection capability (LangChain Mul",
+      "ArXiv demonstrates 62 counselors tested RECAP for resistance detection and expert evaluation of MAGn",
+      "Firecrawl identifies MCP (tool exposure) vs A2A (agent collaboration) as complementary protocols. Ar"
+    ],
+    "research_gap": "Critical gap exists between AI/CS innovation in mental health chatbots and clinical validation. ArXiv shows sophisticated architectures without RCTs, PubMed shows RCTs without architectural detail. MC"
+  },
+  "Claude-Haiku-4.5": {
+    "model": "Claude-Haiku-4.5",
+    "status": "success",
+    "latency": 9.33,
+    "tokens": 2136,
+    "evaluation": {
+      "valid": true,
+      "insights": 5,
+      "xdomain": 5,
+      "high_conf": 3,
+      "kg_e": 8,
+      "kg_r": 6,
+      "gap": true
+    },
+    "insights_text": [
+      "AI mental health systems show strong performance metrics in CS research (77.2% expert preference, 91",
+      "ArXiv papers report frontier LLMs fail expert-level empathy benchmarks (CounselingBench), yet PubMed",
+      "Multiple MCP servers (106 official servers per Firecrawl) enable simultaneous data integration acros",
+      "ArXiv systems implement diagnostic reasoning (DSM/ICD) and therapeutic protocols (CBT/ACT) without c",
+      "Client resistance detection (RECAP: 91.25% F1 with 62 counselors) and stage-aware dialogue systems ("
+    ],
+    "research_gap": "No systematic framework exists for translating AI counseling capability metrics (empathy, resistance detection, dialogue quality) from CS research into clinical trial design. PubMed validates outcome "
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "date": "2026-03-09",
+    "llm": "Claude Opus 4.6 (us.anthropic.claude-opus-4-6-v1)",
+    "total_experiments": 3,
+    "total_tool_calls": 17,
+    "total_servers_used": 6,
+    "total_failed_calls": 0,
+    "unique_servers": ["arxiv", "pubmed", "memory", "firecrawl", "context7", "filesystem"]
+  },
+  "experiment_1": {
+    "name": "Academic Cross-Domain: AI in Mental Health",
+    "servers": ["arxiv", "pubmed", "memory"],
+    "tool_calls": [
+      {"server": "arxiv", "tool": "search_papers", "status": "success", "results": 10},
+      {"server": "pubmed", "tool": "pubmed_search", "status": "success", "results": 5},
+      {"server": "memory", "tool": "create_entities", "status": "success", "entities": 10},
+      {"server": "memory", "tool": "create_relations", "status": "success", "relations": 7},
+      {"server": "memory", "tool": "read_graph", "status": "success", "entities_returned": 10}
+    ],
+    "total_calls": 5,
+    "failures": 0,
+    "patterns": ["Sequential Pipeline", "Parallel Fan-Out", "Cross-Reference Verification", "Domain Bridging"],
+    "cross_domain_insights": [
+      "CS papers build tools but conduct NO clinical trials",
+      "Clinical papers test chatbot efficacy but rarely cite specific CS architectures",
+      "Knowledge graph reveals disconnected research communities working on same problem"
+    ]
+  },
+  "experiment_2": {
+    "name": "OSINT: MCP Ecosystem Competitive Intelligence",
+    "servers": ["firecrawl", "memory"],
+    "tool_calls": [
+      {"server": "firecrawl", "tool": "firecrawl_search", "status": "success", "query": "MCP registry", "results": 5},
+      {"server": "firecrawl", "tool": "firecrawl_scrape", "status": "success", "url": "registry.modelcontextprotocol.io", "data": "106 servers"},
+      {"server": "firecrawl", "tool": "firecrawl_search", "status": "success", "query": "MCP vs A2A", "results": 5},
+      {"server": "firecrawl", "tool": "firecrawl_scrape", "status": "success", "url": "auth0.com/blog/mcp-vs-a2a/", "data": "structured comparison"},
+      {"server": "memory", "tool": "create_entities", "status": "success", "entities": 4},
+      {"server": "memory", "tool": "create_relations", "status": "success", "relations": 4}
+    ],
+    "total_calls": 6,
+    "failures": 0,
+    "patterns": ["Sequential Pipeline", "Cross-Reference Verification", "Iterative Refinement"],
+    "cross_domain_insights": [
+      "MCP (106 servers) vs A2A are complementary not competing: MCP=tool exposure, A2A=agent collaboration",
+      "Our multi-server composition sits at the intersection of both protocols",
+      "MCP Registry data (web) + protocol comparison (web) + knowledge graph (memory) → competitive landscape impossible from any single source"
+    ]
+  },
+  "experiment_3": {
+    "name": "Developer Documentation Research: LangChain MCP",
+    "servers": ["context7", "arxiv", "firecrawl", "filesystem"],
+    "tool_calls": [
+      {"server": "context7", "tool": "resolve-library-id", "status": "success", "result": "/websites/langchain"},
+      {"server": "context7", "tool": "query-docs", "status": "success", "result": "MultiServerMCPClient code found"},
+      {"server": "arxiv", "tool": "search_papers", "status": "success", "results": 5},
+      {"server": "firecrawl", "tool": "firecrawl_search", "status": "success", "results": 5},
+      {"server": "firecrawl", "tool": "firecrawl_scrape", "status": "success"},
+      {"server": "filesystem", "tool": "write_file", "status": "success"}
+    ],
+    "total_calls": 6,
+    "failures": 0,
+    "patterns": ["Sequential Pipeline", "Parallel Fan-Out", "Cross-Reference Verification", "Domain Bridging"],
+    "cross_domain_insights": [
+      "LangChain already has MultiServerMCPClient — the mechanism exists but no composition patterns documented",
+      "ToolRet benchmark shows tool retrieval is still poor — our patterns address the 'what to do after retrieval' gap",
+      "Gap confirmed: mechanism (LangChain) + benchmarks (academia) exist, but PATTERNS for effective multi-server composition do not"
+    ]
+  },
+  "aggregate_metrics": {
+    "total_tool_calls": 17,
+    "total_failures": 0,
+    "failure_rate": "0%",
+    "servers_used": 6,
+    "cross_domain_insights_total": 9,
+    "knowledge_graph_final": {"entities": 14, "relations": 11},
+    "composition_patterns_observed": {
+      "Sequential Pipeline": 3,
+      "Parallel Fan-Out": 2,
+      "Cross-Reference Verification": 3,
+      "Iterative Refinement": 1,
+      "Domain Bridging": 2
+    }
+  }
+}
